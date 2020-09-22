@@ -36,11 +36,11 @@ func getPrimers(file string, hook string, fenzyme string, renzyme string) (map[s
 	forwardp := make(map[string][]int)
 	reversep := make(map[string][]int)
 	var empty []int
-	for n := (16 - len(fbegin)); n < 12; n++ {
+	for n := (16 - len(fbegin)); n < 16; n++ {
 		fmt.Println(n)
 		forwardp[fbegin + sequence[0:n]] = empty
 	}
-	for n := (16 - len(rbegin)); n < 12; n++ {
+	for n := (16 - len(rbegin)); n < 16; n++ {
 		reversep[rbegin + rsequence[0:n]] = empty
 	}
 	return forwardp, reversep
